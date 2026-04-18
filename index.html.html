@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/847/847969.png">
+<title>Mother's Day Calligraphy Sticker Generator</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fff);
+    text-align: center;
+    padding: 40px;
+}
+h1 {
+    color: #d63384;
+}
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background: #d63384;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background: #b0256b;
+}
+#output {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-size: 15px;
+    text-align: left;
+}
+.copy-btn {
+    margin-top: 15px;
+    background: #28a745;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌸 Mother's Day Sticker Prompt Generator</h1>
+
+<button onclick="generatePrompt()">Generate Prompt</button>
+
+<div id="output">Click the button to generate a prompt...</div>
+
+<button class="copy-btn" onclick="copyText()">Copy Prompt</button>
+
+<script>
+
+const texts = [
+"Happy Mother’s Day",
+"Best Mom Ever",
+"Love You Mom",
+"Mom, You Are My Heart",
+"Forever My Mother",
+"A Mother’s Love is Endless",
+"Super Mom",
+"Mama",
+"Home is Where Mom Is",
+"My First Best Friend"
+];
+
+const styles = [
+"elegant flowing script",
+"modern brush lettering",
+"luxury thin calligraphy",
+"bold expressive brush script",
+"soft handwritten cursive",
+"ornate vintage script",
+"minimalist clean typography"
+];
+
+const colors = [
+"soft pastel tones",
+"pink and gold palette",
+"black and gold luxury",
+"warm blush and lavender",
+"vibrant gradient colors",
+"cream and gold tones"
+];
+
+const elements = [
+"floral decorations (roses, peonies)",
+"hearts and stars doodles",
+"watercolor floral background",
+"minimal clean background",
+"glowing light accents",
+"soft shadow sticker outline"
+];
+
+const effects = [
+"sticker style with white border",
+"transparent background PNG",
+"3D glass effect lettering",
+"subtle glow and shine",
+"high detail 4K resolution",
+"premium digital sticker finish"
+];
+
+function getRandom(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function generatePrompt() {
+    let prompt = `Beautiful English calligraphy of the text '${getRandom(texts)}' in ${getRandom(styles)}, using ${getRandom(colors)}, with ${getRandom(elements)}, ${getRandom(effects)}, ultra high quality, 4K, clean composition`;
+
+    document.getElementById("output").innerText = prompt;
+}
+
+function copyText() {
+    let text = document.getElementById("output").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Prompt copied!");
+}
+
+</script>
+
+</body>
+</html>
